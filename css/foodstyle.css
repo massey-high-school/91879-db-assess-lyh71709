@@ -1,7 +1,7 @@
 body {
     margin: auto;
     padding: 50px;
-    color: #000;
+    color: #fff;
     font-family: 'Lato', sans-serif;
 }
 
@@ -28,7 +28,7 @@ body {
 
 .box {
     padding: 20px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     background-color: #ddd;
 }
 
@@ -36,7 +36,7 @@ body {
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #888;  /* dark grey */
+    background-color: #3C6E71;  /* dark grey */
 }
 
 /* Set font on dark areas to white */
@@ -58,20 +58,20 @@ body {
 
 .nav {
     grid-area: nav;
-    background-color: #DDD;  /* silver */
+    background-color: #6C6D6E;  /* silver */
     font-size: 150%;
     text-align: center;
 }
 
 .side {
     grid-area: side;
-    background-color: #333;
+    background-color: #353535;
 }
 
 .main {
     grid-area: main;
-    background-color: #EEE;  /* very pale grey */
-    border: solid 1px #CCC;
+    background-color: #284B63;  /* very pale grey */
+    border: solid 1px #D9D9D9;
 }
 
 
@@ -88,8 +88,8 @@ h1, h2, h3, h4 {
 
 /* Navigation Links */
 .nav a {font-weight: bold;}
-.nav a:link, .nav a:visited {color: #AA0000;} /*dark red */
-.nav a:hover {color: #604830; text-decoration: none;} /* chocolate brown */
+.nav a:link, .nav a:visited {color: #fff;} /*dark red */
+.nav a:hover {color: #D9D9D9; text-decoration: none;} /* chocolate brown */
 
 
 /* links in page */
