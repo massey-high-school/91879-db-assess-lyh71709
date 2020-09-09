@@ -29,7 +29,6 @@ body {
 .box {
     padding: 20px;
     border-radius: 10px;
-    background-color: #ddd;
 }
 
 /* Area colouring... */
@@ -109,7 +108,8 @@ a:hover{color: #000;}    /* Black*/
     border-radius: 50%;
     max-width: 85%;
     height: auto;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.8);     
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    background-color: #fff;
 }
 
 .center_image {

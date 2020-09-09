@@ -1,56 +1,6 @@
-<!DOCTYPE HTML>
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Put Content Here">
-    <meta name="keywords" content="Put keywords here">
-    <meta name="author" content="Put your name here">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Food Review Database</title>
-    
-    <!-- Edit the link below / replace with your chosen google font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
-    
-    <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
-    <link rel="stylesheet" href="css/foodstyle.css"> 
-    
-</head>
-    
-<body>
-    
-    <div class="wrapper">
-    
-
-        
-        <div class="box banner">
-            
-        <!-- logo image linking to home page goes here -->
-        <a href="index.php">
-            <div class="box logo"  title="Logo - Click here to go to the Home Page">
-            <img class="img-circle" src="images/gen_logo.png" width="150" height="150" alt="generic logo" />
-            
-            </div>    <!-- / logo -->
-        </a>
-            
-            <h1>The  Critique</h1>
-        </div>    <!-- / banner -->
-
-        <!-- Navigation goes here.  Edit BOTH the file name and the link name -->
-        <div class="box nav">
-            <a href="index.html">Home</a> | 
-            <a href="page1.html">Page 1</a> | 
-            <a href="page2.html">Page 2</a> | 
-            <a href="page3.html">Page 3</a> | 
-            <a href="contact.html">Contact</a>
-        </div>    <!-- / nav -->        
-        
-        
-        <div class="box side">
-            Side Bar goes here
-        </div>
+<?php 
+    include "topbit.php";
+?>
         
         <div class="box main">
             <h2>First Page heading</h2>
@@ -69,11 +19,6 @@
             
         </div>    <!-- / main -->
         
-
-        <div class="box footer">
-            CC Henry Ly 2020
-        </div>    <!-- / footer -->
-    
-    </div>  <!-- / wrapper  -->
-    
-</body>        
+<?php 
+    include "bottombit.php";
+?>
