@@ -55,13 +55,6 @@ body {
     grid-area: banner;
 }
 
-.nav {
-    grid-area: nav;
-    background-color: #6C6D6E;  /* silver */
-    font-size: 150%;
-    text-align: center;
-}
-
 .side {
     grid-area: side;
     background-color: #353535;
@@ -85,14 +78,14 @@ h1, h2, h3, h4 {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Navigation Links */
-.nav a {font-weight: bold;}
-.nav a:link, .nav a:visited {color: #fff;} /*dark red */
-.nav a:hover {color: #D9D9D9; text-decoration: none;} /* chocolate brown */
+/* Side Links */
+a.side{font-weight:bold;}
+a.side:link, a.side:visited {color:#f3c0d1;} /* pale pink */
+a.side:hover {color: #cecfd5; text-decoration: none;} /* pale blue */
 
 
 /* links in page */
-a {font-weight: bold;}
+a {font-weight: bold; text-decoration: none;}
 a:link{color: #AA0000;} /*dark_red */
 a:visited{color: #111177;} /* dark blue */
 a:hover{color: #000;}    /* Black*/

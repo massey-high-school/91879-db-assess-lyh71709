@@ -54,20 +54,10 @@
         </a>
             
             <h1>The Craving Opinion</h1>
-        </div>    <!-- / banner -->
-
-        <!-- Navigation goes here.  Edit BOTH the file name and the link name -->
-        <div class="box nav">
-            <a href="index.html">Home</a> | 
-            <a href="page1.html">Page 1</a> | 
-            <a href="page2.html">Page 2</a> | 
-            <a href="page3.html">Page 3</a> | 
-            <a href="contact.html">Contact</a>
-        </div>    <!-- / nav -->        
-        
+        </div>    <!-- / banner -->    
         
         <div class="box side">
-            <h2>Side Bar goes here</h2>
+            <h2>Search  |   <a href="showall.php">Show All</a></h2>
                 <p>items go here</p>
             
                 <ol>
