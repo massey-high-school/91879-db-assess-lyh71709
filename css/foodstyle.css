@@ -35,7 +35,7 @@ body {
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #3C6E71;  /* dark grey */
+    background-color: #A2D729;  /* dark turqoise */
 }
 
 /* Set font on dark areas to white */
@@ -57,15 +57,15 @@ body {
 
 .side {
     grid-area: side;
-    background-color: #353535;
+    background-color: #342E37; /* Black Coffee */
 }
 
 .main {
     grid-area: main;
-    background-color: #284B63;  /* very pale grey */
+    background-color: #FAFFFD;  /* Baby Powder */
     border: solid 1px #D9D9D9;
+    color: #342E37 
 }
-
 
 .footer {
     grid-area: footer;
@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
 
 /* Side Links */
 a.side{font-weight:bold;}
-a.side:link, a.side:visited {color:#f3c0d1;} /* pale pink */
+a.side:link, a.side:visited {color:#fff;} /* white */
 a.side:hover {color: #cecfd5; text-decoration: none;} /* pale blue */
 
 

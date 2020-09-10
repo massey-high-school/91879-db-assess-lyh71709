@@ -57,13 +57,6 @@
         </div>    <!-- / banner -->    
         
         <div class="box side">
-            <h2>Search  |   <a href="showall.php">Show All</a></h2>
-                <p>items go here</p>
+            <h2>Search  |   <a class="side" href="showall.php">Show All</a></h2>
             
-                <ol>
-                    <li>Here</li>
-                    <li>is</li>
-                    <li>a</li>
-                    <li>list</li>
-                </ol>
         </div> <!-- / side bar -->
