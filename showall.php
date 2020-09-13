@@ -3,12 +3,14 @@
 
 $showall_sql="SELECT *
 FROM `2020_L1_Assess_HenLy`
-ORDER BY `2020_L1_Assess_HenLy`.`Item` ASC";
+ORDER BY `2020_L1_Assess_HenLy`.`ID` ASC";
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);
 
 ?>
+
+
         
         <div class="box main">
             <h2>All Items</h2>
@@ -40,11 +42,11 @@ $count=mysqli_num_rows($showall_query);
                     <!-- Results go here -->
                     <div class="results">
                 
-                        <p>Title: <span class="sub_heading"><?php echo $showall_rs['Title']; ?></span></p>
+                        <p>Item: <span class="sub_heading"><?php echo $showall_rs['Item']; ?></span></p>
 
-                        <p>Author: <span class="sub_heading"><?php echo $showall_rs['Author']; ?></span></p>
+                        <p>Meal Type: <span class="sub_heading"><?php echo $showall_rs['Meal Type']; ?></span></p>
 
-                        <p>Genre: <span class="sub_heading"><?php echo $showall_rs['Genre']; ?></span></p>
+                        <p>Location: <span class="sub_heading"><?php echo $showall_rs['Location']; ?></span></p>
 
                         <p>Rating:
                             <span class="sub_heading">
@@ -86,7 +88,7 @@ $count=mysqli_num_rows($showall_query);
                                 <span class="fa fa-star"></span>
                             <?php    }
                                 
-                            else if ( $showall_rs['Rating'] ==3) 
+                            else if ( $showall_rs['Rating'] ==2) 
                                 {
                             ?>
                                 <span class="fa fa-star checked"></span>
@@ -98,6 +100,8 @@ $count=mysqli_num_rows($showall_query);
 
                             </span>
                         </p>
+                        
+                        <p>Vegetarian: <span class="sub_heading"><?php echo $showall_rs['Vegetarian']; ?></span></p>
 
                         <br />
 
