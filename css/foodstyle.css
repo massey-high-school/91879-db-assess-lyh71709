@@ -53,6 +53,7 @@ body {
 
 .banner {
     grid-area: banner;
+    border: solid 2px #342E37;
 }
 
 .side {
@@ -62,9 +63,9 @@ body {
 
 .main {
     grid-area: main;
-    background-color: #fff   /*#F0F0F0;*/  /* Baby Powder */
+    background-color: #79B500;  /* Baby Powder */
     border: solid 1px #D9D9D9;
-    color: #342E37 
+    color: #000;
 }
 
 .footer {
@@ -112,16 +113,20 @@ a:hover{color: #000;}    /* Black*/
 /* Sub Heading Formatting */
 .sub_heading {
     font-family: 'Ubuntu', sans-serif;
-    color: #593849; /* purple */
-    font-weight: bold;
+    color: #000; /* purple */
 }
 
 /* Results Box Formatting */
 .results{
-    background-color: #f4ebe1;
+    background-color: #fff;
     border-radius: 10px;
     border: 1px solid #000;
     padding: 5px;
+    color: #000;
+}
+
+.checked {
+    color: orange;
 }
 
 

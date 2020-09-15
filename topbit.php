@@ -59,4 +59,20 @@
         <div class="box side">
             <h2>Search  |   <a class="side" href="showall.php">Show All</a></h2>
             
+            <i>Search for your Item, Meal Type or Location here</i>
+            
+            <hr />
+            
+            <!-- Start of Item Search -->
+        
+            <form method="post" action="item_search.php" enctype="multipart/form-data">
+
+                <input class="search" type="text" name="title" size = "40" value="" required placeholder="Item..." />
+
+                <input class="submit" type="submit" name="find_item" value ="&#xf002;" />
+
+            </form>
+
+            <!-- End of Title Search -->
+            
         </div> <!-- / side bar -->
