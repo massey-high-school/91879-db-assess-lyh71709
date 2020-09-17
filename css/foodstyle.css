@@ -65,7 +65,7 @@ body {
     grid-area: main;
     background-color: #79B500;  /* Baby Powder */
     border: solid 1px #D9D9D9;
-    color: #000;
+    color: #fff;
 }
 
 .footer {
@@ -129,7 +129,11 @@ a:hover{color: #000;}    /* Black*/
     color: orange;
 }
 
+/* form formatting */
 
+.search {
+    width: 200px;
+}
 
 
 

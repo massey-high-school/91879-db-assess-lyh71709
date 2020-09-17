@@ -33,7 +33,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
     
     <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
-    <link rel="stylesheet" href="css/foodstyle.css"> 
+    <link rel="stylesheet" href="css/foodstyle.css">
+    
     
 </head>
     
@@ -69,10 +70,12 @@
 
                 <input class="search" type="text" name="title" size = "40" value="" required placeholder="Item..." />
 
-                <input class="submit" type="submit" name="find_item" value ="&#xf002;" />
+                <input class="submit" type="submit" name="find_item" value ="Search" />
 
             </form>
 
             <!-- End of Title Search -->
+            
+            <hr />
             
         </div> <!-- / side bar -->
