@@ -35,12 +35,12 @@ body {
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #A2D729;  /* dark turqoise */
+    background-color: #A2D729;  /* Lime */
 }
 
 /* Set font on dark areas to white */
 .logo, .banner, .side, .footer {
-    color: #fff;
+    color: #fff; /* white */
 }
 
 /* Area specifics */
@@ -53,7 +53,7 @@ body {
 
 .banner {
     grid-area: banner;
-    border: solid 2px #342E37;
+    border: solid 2px #342E37; /* Black Coffe */
 }
 
 .side {
@@ -63,9 +63,9 @@ body {
 
 .main {
     grid-area: main;
-    background-color: #79B500;  /* Baby Powder */
-    border: solid 1px #D9D9D9;
-    color: #fff;
+    background-color: #f9f9f9;  /* Baby Powder */
+    border: solid 1px #D9D9D9; /* Light Gray */
+    color: #000; /* white */
 }
 
 .footer {
@@ -82,7 +82,7 @@ h1, h2, h3, h4 {
 /* Side Links */
 a.side{font-weight:bold;}
 a.side:link, a.side:visited {color:#fff;} /* white */
-a.side:hover {color: #cecfd5; text-decoration: none;} /* pale blue */
+a.side:hover {color: #cecfd5; text-decoration: none;} /* pale grey */
 
 
 /* links in page */
@@ -103,7 +103,7 @@ a:hover{color: #000;}    /* Black*/
     max-width: 85%;
     height: auto;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.8);
-    background-color: #fff;
+    background-color: #fff; /* white */
 }
 
 .center_image {
@@ -112,21 +112,31 @@ a:hover{color: #000;}    /* Black*/
 
 /* Sub Heading Formatting */
 .sub_heading {
+    font-weight: bold;
     font-family: 'Ubuntu', sans-serif;
-    color: #000; /* purple */
+    color: #000; /* black */
 }
 
 /* Results Box Formatting */
 .results{
-    background-color: #fff;
+    background-color: #C8FF8E; /* Milky Green */
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 1px solid #000; /* White */
     padding: 5px;
-    color: #000;
+    color: #000; /* White */
 }
 
 .checked {
-    color: orange;
+    color: orange; /* Orange */
+}
+
+/* Error Box formatting */
+.error{
+    background-color: #ffe0ed; /*pale pink*/
+    border: 2px solid #8a1737; /* dark red border */
+    color: #8a1737; /* dark red */
+    border-radius: 5px;
+    padding: 20px;
 }
 
 /* form formatting */

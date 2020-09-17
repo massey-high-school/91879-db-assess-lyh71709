@@ -6,8 +6,9 @@
   
     session_start();
     include("config.php");
+    include("functions.php"); // include data sanitising...
     
-    // Connect tp database...
+    // Connect to database...
     
     $dbconnect=mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     
@@ -22,9 +23,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Put Content Here">
-    <meta name="keywords" content="Put keywords here">
-    <meta name="author" content="Put your name here">
+    <meta name="description" content="A food review site">
+    <meta name="keywords" content="Food, Review">
+    <meta name="author" content="Henry Ly">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Food Review Database</title>
@@ -68,7 +69,7 @@
         
             <form method="post" action="item_search.php" enctype="multipart/form-data">
 
-                <input class="search" type="text" name="title" size = "40" value="" required placeholder="Item..." />
+                <input class="search" type="text" name="item" size = "40" value="" required placeholder="Item..." />
 
                 <input class="submit" type="submit" name="find_item" value ="Search" />
 
