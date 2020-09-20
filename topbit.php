@@ -71,12 +71,49 @@
 
                 <input class="search" type="text" name="item" size = "40" value="" required placeholder="Item..." />
 
-                <input class="submit" type="submit" name="find_item" value ="Search" />
+                <input class="submit" type="submit" name="find_item" value ="&#xf002;" />
 
             </form>
 
             <!-- End of Title Search -->
             
+            <!-- Start of Meal Type Search -->
+        
+            <form method="post" action="meal_type_search.php" enctype="multipart/form-data">
+
+                <select class="search" name="meal_type" required>
+                    <option value="" disabled selected>Meal Type...</option>
+                    <?php 
+                    // retrieve unique values in meal type column...
+                    $meal_type_sql="SELECT DISTINCT `Meal Type`
+                    FROM `2020_L1_Assess_HenLy`
+                    ORDER BY `2020_L1_Assess_HenLy`.`Meal Type` ASC";
+                    $meal_type_query=mysqli_query($dbconnect, $meal_type_sql);
+                    $meal_type_rs=mysqli_fetch_assoc($meal_type_query);
+
+                    do {
+
+                        ?>
+
+                    <option value="<?php echo $meal_type_rs['Meal Type']; ?>"><?php echo $meal_type_rs['Meal Type']; ?></option>
+
+                    <?php
+
+                    } // end of meal type option retrieval
+
+                    while($meal_type_rs=mysqli_fetch_assoc($meal_type_query));
+
+                    ?>
+
+
+
+                </select>
+
+                <input class="submit" type="submit" name="find_meal_type" value ="&#xf002;" />
+        
+            </form>
+        
+            <!-- End of meal type Search -->
             <hr />
             
         </div> <!-- / side bar -->
