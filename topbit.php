@@ -33,6 +33,7 @@
     <!-- Edit the link below / replace with your chosen google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
     
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
     <link rel="stylesheet" href="css/foodstyle.css">
     
@@ -114,6 +115,18 @@
             </form>
         
             <!-- End of meal type Search -->
+            
+            <!-- Start of location Search -->
+        
+            <form method="post" action="location_search.php" enctype="multipart/form-data">
+
+                <input class="search" type="text" name="item" size = "40" value="" required placeholder="Location..." />
+
+                <input class="submit" type="submit" name="find_loaction" value ="&#xf002;" />
+
+            </form>
+
+            <!-- End of loaction Search -->
             <hr />
             
         </div> <!-- / side bar -->

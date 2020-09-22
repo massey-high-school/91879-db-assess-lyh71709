@@ -2,16 +2,16 @@
     include "topbit.php";
 
 // if find button pushed
-if(isset($_POST['find_meal_type']))
+if(isset($_POST['find_location']))
     
 {
     
 // Retrieves item and sanitises it.
-$meal_type=test_input(mysqli_real_escape_string($dbconnect,$_POST['meal_type']));
+$location=test_input(mysqli_real_escape_string($dbconnect,$_POST['location']));
 
 $showall_sql="SELECT *
 FROM `2020_L1_Assess_HenLy`
-WHERE `Meal Type` LIKE '%$meal_type%'";
+WHERE `Location` LIKE '%$location%'";
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);
@@ -21,7 +21,7 @@ $count=mysqli_num_rows($showall_query);
 
         
         <div class="box main">
-            <h2>Meal Type Search</h2>
+            <h2>Location Search</h2>
             
             <?php
             
@@ -136,6 +136,9 @@ $count=mysqli_num_rows($showall_query);
             } // end isset
 
             ?>
+            
+            </div>
+            
             
         </div>    <!-- / main -->
         

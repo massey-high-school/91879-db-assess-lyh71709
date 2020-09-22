@@ -7,9 +7,7 @@ if(isset($_POST['find_item']))
 {
     
 // Retrieves item and sanitises it.
-$title=test_input(mysqli_real_escape_string($dbconnect,$_POST['item']));
-    
-$item = $_POST['item'];
+$item=test_input(mysqli_real_escape_string($dbconnect,$_POST['item']));
 
 $showall_sql="SELECT *
 FROM `2020_L1_Assess_HenLy`
