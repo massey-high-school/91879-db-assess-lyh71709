@@ -122,11 +122,11 @@
 
                 <input class="search" type="text" name="item" size = "40" value="" required placeholder="Location..." />
 
-                <input class="submit" type="submit" name="find_loaction" value ="&#xf002;" />
+                <input class="submit" type="submit" name="find_location" value ="&#xf002;" />
 
             </form>
 
-            <!-- End of loaction Search -->
+            <!-- End of location Search -->
             <hr />
             
         </div> <!-- / side bar -->

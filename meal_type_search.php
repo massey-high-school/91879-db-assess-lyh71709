@@ -6,15 +6,17 @@ if(isset($_POST['find_meal_type']))
     
 {
     
-// Retrieves item and sanitises it.
+$meal_type=$_POST['meal_type'];
+    
+// Retrieves Meal Type and sanitises it.
 $meal_type=test_input(mysqli_real_escape_string($dbconnect,$_POST['meal_type']));
 
-$showall_sql="SELECT *
+$find_sql="SELECT *
 FROM `2020_L1_Assess_HenLy`
-WHERE `Meal Type` LIKE '%$meal_type%'";
-$showall_query=mysqli_query($dbconnect, $showall_sql);
-$showall_rs=mysqli_fetch_assoc($showall_query);
-$count=mysqli_num_rows($showall_query);
+WHERE `Location` LIKE '%$meal_type%'";
+$find_query=mysqli_query($dbconnect, $find_sql);
+$find_rs=mysqli_fetch_assoc($find_query);
+$count=mysqli_num_rows($find_query);
 
 ?>
 
@@ -50,11 +52,11 @@ $count=mysqli_num_rows($showall_query);
                     <!-- Results go here -->
                     <div class="results">
                 
-                        <p>Item: <span class="sub_heading"><?php echo $showall_rs['Item']; ?></span></p>
+                        <p>Item: <span class="sub_heading"><?php echo $find_rs['Item']; ?></span></p>
 
-                        <p>Meal Type: <span class="sub_heading"><?php echo $showall_rs['Meal Type']; ?></span></p>
+                        <p>Meal Type: <span class="sub_heading"><?php echo $find_rs['Meal Type']; ?></span></p>
 
-                        <p>Location: <span class="sub_heading"><?php echo $showall_rs['Location']; ?></span></p>
+                        <p>Location: <span class="sub_heading"><?php echo $find_rs['Location']; ?></span></p>
 
                         <p>Rating:
                             <span class="sub_heading">
@@ -66,7 +68,7 @@ $count=mysqli_num_rows($showall_query);
 
                             // I only did 3-5 star rating because there was no books with under 3 stars
 
-                            if ( $showall_rs['Rating'] ==5) 
+                            if ( $find_rs['Rating'] ==5) 
                                 {
                             ?>
                                 <span class="fa fa-star checked"></span>
@@ -76,7 +78,7 @@ $count=mysqli_num_rows($showall_query);
                                 <span class="fa fa-star checked"></span>
                             <?php    }   
 
-                            else if ( $showall_rs['Rating'] ==4) 
+                            else if ( $find_rs['Rating'] ==4) 
                                 {
                             ?>
                                 <span class="fa fa-star checked"></span>
@@ -86,7 +88,7 @@ $count=mysqli_num_rows($showall_query);
                                 <span class="fa fa-star"></span>
                             <?php    }  
 
-                           else if ( $showall_rs['Rating'] ==3) 
+                           else if ( $find_rs['Rating'] ==3) 
                                 {
                             ?>
                                 <span class="fa fa-star checked"></span>
@@ -96,7 +98,7 @@ $count=mysqli_num_rows($showall_query);
                                 <span class="fa fa-star"></span>
                             <?php    }
                                 
-                            else if ( $showall_rs['Rating'] ==2) 
+                            else if ( $find_rs['Rating'] ==2) 
                                 {
                             ?>
                                 <span class="fa fa-star checked"></span>
@@ -109,14 +111,14 @@ $count=mysqli_num_rows($showall_query);
                             </span>
                         </p>
                         
-                        <p>Vegetarian: <span class="sub_heading"><?php echo $showall_rs['Vegetarian']; ?></span></p>
+                        <p>Vegetarian: <span class="sub_heading"><?php echo $find_rs['Vegetarian']; ?></span></p>
 
                         <br />
 
                         <p><span class="sub_heading">Review / Response</span></p>
 
                         <p>
-                            <?php echo $showall_rs['Review']; ?>  
+                            <?php echo $find_rs['Review']; ?>  
                         </p>
 
                     </div> <!-- / end results -->
@@ -127,7 +129,7 @@ $count=mysqli_num_rows($showall_query);
                      
                 } // end of 'do'
                 
-                while($showall_rs=mysqli_fetch_assoc($showall_query));
+                while($find_rs=mysqli_fetch_assoc($find_query));
                 
             } // end else
             
