@@ -76,7 +76,7 @@
 
             </form>
 
-            <!-- End of Title Search -->
+            <!-- End of Item Search -->
             
             <!-- Start of Meal Type Search -->
         
@@ -106,8 +106,6 @@
 
                     ?>
 
-
-
                 </select>
 
                 <input class="submit" type="submit" name="find_meal_type" value ="&#xf002;" />
@@ -120,7 +118,7 @@
         
             <form method="post" action="location_search.php" enctype="multipart/form-data">
 
-                <input class="search" type="text" name="item" size = "40" value="" required placeholder="Location..." />
+                <input class="search" type="text" name="location" size = "40" value="" required placeholder="Location..." />
 
                 <input class="submit" type="submit" name="find_location" value ="&#xf002;" />
 
@@ -128,5 +126,65 @@
 
             <!-- End of location Search -->
             <hr />
+            <!-- Start of ratings form -->
+        
+            <form method="post" action="rating_search.php" enctype="multipart/form-data">
+
+                <select class="half_width" name="amount">
+                    <option value="exactly">Exactly...</option>
+                    <option value="more" selected>At least...</option>
+                    <option value="less">At most...</option>
+                </select>
+
+                <select class="half_width" name="stars">
+                    <option value=1>&#9733;</option>
+                    <option value=2>&#9733;&#9733;</option>
+                    <option value=3 selected>&#9733;&#9733;&#9733;</option>
+                    <option value=4>&#9733;&#9733;&#9733;&#9733;</option>
+                    <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+
+                </select>
+
+                    <input class="submit" type="submit" name="find_rating" value ="&#xf002;" />
+
+            </form>
+        
+            <!-- end of ratings form -->
+            
+            <!-- Start of Meal Type Search -->
+
+            <form method="post" action="vegetarian_search.php" enctype="multipart/form-data">
+
+                <select class="search" name="vegetarian" required>
+                    <option value="" disabled selected>Meal Type...</option>
+                    <?php 
+                    // retrieve unique values in meal type column...
+                    $meal_type_sql="SELECT DISTINCT `Meal Type`
+                    FROM `2020_L1_Assess_HenLy`
+                    ORDER BY `2020_L1_Assess_HenLy`.`Meal Type` ASC";
+                    $meal_type_query=mysqli_query($dbconnect, $meal_type_sql);
+                    $meal_type_rs=mysqli_fetch_assoc($meal_type_query);
+
+                    do {
+
+                        ?>
+
+                    <option value="<?php echo $meal_type_rs['Meal Type']; ?>"><?php echo $meal_type_rs['Meal Type']; ?></option>
+
+                    <?php
+
+                    } // end of meal type option retrieval
+
+                    while($meal_type_rs=mysqli_fetch_assoc($meal_type_query));
+
+                    ?>
+
+                </select>
+
+                <input class="submit" type="submit" name="find_meal_type" value ="&#xf002;" />
+
+            </form>
+
+            <!-- End of meal type Search -->
             
         </div> <!-- / side bar -->

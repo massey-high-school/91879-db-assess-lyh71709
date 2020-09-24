@@ -2,18 +2,16 @@
     include "topbit.php";
 
 // if find button pushed
-if(isset($_POST['find_location']))
+if(isset($_POST['find_vegetarian']))
     
 {
     
-$location=$_POST['location'];
-    
-// Retrieves location and sanitises it.
-$location=test_input(mysqli_real_escape_string($dbconnect,$_POST['location']));
+// Retrieves vegetarian and sanitises it.
+$vegetarian=test_input(mysqli_real_escape_string($dbconnect,$_POST['vegetarian']));
 
 $find_sql="SELECT *
 FROM `2020_L1_Assess_HenLy`
-WHERE `Location` LIKE '%$location%'";
+WHERE `Vegetarian` LIKE '%$vegetarian%'";
 $find_query=mysqli_query($dbconnect, $find_sql);
 $find_rs=mysqli_fetch_assoc($find_query);
 $count=mysqli_num_rows($find_query);
@@ -23,7 +21,7 @@ $count=mysqli_num_rows($find_query);
 
         
         <div class="box main">
-            <h2>Location Search</h2>
+            <h2>Vegetarian Search</h2>
             
             <?php
             
